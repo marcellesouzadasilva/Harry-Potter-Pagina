@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginstyle.css" />
+    <title>Hogwarts</title>
+</head>
+
+<body>
+    
+  <header>
+    <h2 class="hogwarts"> Hogwarts </h2>
+    <nav class="navigation">
+        <a href="sobrehogwarts.html">Sobre Hogwarts</a>
+        <a href="Casas">Casas</a>
+        <a href="Quadribol">Quadribol</a>
+        <button class="btnLogin-popup">Login</button>
+    </nav>
+   </header>
+
+      <div class = "wrapper">
+
+        <span class = "icon-close"> <ion-icon name="close-outline"></ion-icon> </span>
+
+        <div class = "form-box login">
+          <h2>Login</h2>
+          <form id = loginForm action = "paginainicial.html"> 
+
+            <div class = "input-box">
+              <span class = "icon"><ion-icon name="mail-outline"></ion-icon></span>
+              <input type = "email" id="email" name="email" required>
+              <label>Email</label>
+            </div>
+
+            <div class = "input-box">
+              <span class = "icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+              <input type="password" id="password" name="password" required>
+              <label>Senha</label>
+            </div>
+
+            <button type="submit" class="btn">Entrar</button>
+          </form>
+
+          <p id="message"></p>
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            const message = document.getElementById('message');
+            
+            if (response.ok) {
+                // Redirecionar para a página de sucesso
+                window.location.href = '/paginainicial';
+            } else {
+                // Exibir mensagem de erro
+                const result = await response.json();
+                message.textContent = result.message;
+                message.style.color = 'red';
+            }
+            });
+        </script>
+
+        </div>
+      </div>
+
+
+      <script src="script.js"></script>
+
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+      </script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+      </script>
+
+</body>
+</script>
+</html>

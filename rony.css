@@ -1,0 +1,200 @@
+body {
+    background-color: #d8c59f;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Coloca elementos em coluna */
+    align-items: center; /* Centraliza elementos horizontalmente */
+   border-radius: 1px;
+
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:content-box;
+    position: relative;
+}
+
+
+h1 {
+    font-family: Georgia, serif;
+    font-weight: bolder;
+    font-size: 400%;
+    
+
+}
+
+
+.gif {
+
+    position:relative;
+    right: 35%;
+    top: 5vh;
+    width: 40vw;
+    height: 70vh;
+    
+
+}
+
+.texto1 {
+    position:relative;
+    right: 14%;
+    top: 10vh;
+    font-size: 1.5em;
+    width: 41%;
+    font-family: Georgia, serif;
+    text-align: justify;
+
+
+}
+
+.sidebar {
+    
+        position: relative;
+        left: 25%;
+        bottom: 750px;
+        background-color:#afa183 ;
+        border-radius: 1vw;
+        padding: 2vh 2vw;
+        width: 25vw;
+        height: 145vh;
+        text-align: center;
+        
+}
+
+
+
+.hr1 {
+    position: relative;
+    top: 2vh;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    
+
+}
+
+.hr2 {
+    position: relative;
+    top: 15vh;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    
+
+}
+
+.hr3 {
+    position: relative;
+    top: 25vh;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    
+
+}
+
+.hr4 {
+    position: relative;
+    top: 38vh;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    
+
+}
+
+.hr5 {
+    position: relative;
+    top: 51vh;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    
+
+}
+
+
+.hr6 {
+    position: relative;
+    top: 63vh;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    
+
+}
+
+.Hobbies {
+    position: relative;
+    top: 66vh;
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.t6 {
+    position: relative;
+    top: 68vh; 
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.Skills {
+    position: relative;
+    top: 55vh;  
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.t5 {
+    position: relative;
+    top: 58vh; 
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.Family {
+    position: relative;
+    top: 42vh;  
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.t4 {
+    position: relative;
+    top: 45vh; 
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.Wand {
+    position: relative;
+    top: 30vh; 
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.t3 {
+    position: relative;
+    top: 33vh; 
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.House {
+    position: relative;
+    top: 18vh; 
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.t2 {
+    position: relative;
+    top: 22vh; 
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.FullName {
+    position: relative;
+    top: 5vh; 
+    font-family: Georgia, serif;
+    text-align: start;
+}
+
+.t1 {
+    position: relative;
+    top: 10vh; 
+    font-family: Georgia, serif;
+    text-align: start;
+}
+

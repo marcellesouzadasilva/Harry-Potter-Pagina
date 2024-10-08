@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sobreHW.css"/>
+  <title>Sobre Hogwarts</title>
+</head>
+<body>
+     
+  <header>
+    <h2 class="hogwarts"> Hogwarts </h2>
+    <nav class="navigation">
+      <a href="Sobre Hogwarts">Sobre Hogwarts</a>
+      <a href="Casas">Casas</a>
+      <a href="Quadribol">Quadribol</a>
+    </nav>
+  </header>
+
+  <div class="Titulo">
+   <h1>Bem-vindo à Escola de Magia<br> e Bruxaria de Hogwarts!</h1>
+  </div>
+  <div class="fundo">
+    <img src="fundo1.jpg" class="fundo1">
+  </div>
+
+  <div class="Texto1">
+    <p>Se você está prestes a embarcar nesta jornada mágica, ou já faz parte da nossa família, saiba que Hogwarts é muito mais do que uma simples escola. Fundada por quatro dos maiores bruxos e bruxas de todos os tempos — Godric Gryffindor, Helga Hufflepuff, Rowena Ravenclaw e Salazar Slytherin — nossa instituição é o lar de aprendizado, amizade e aventura.</p><br>
+  </div>
+
+  <div class="Fundadores">
+    <img src="GodricGryffindor.jpg" class="GodricGryffindor" >
+    <img src="HelgaHufflepuff.jpg" class="HelgaHufflepuff" >
+    <img src="RowenaRavenclaw.jpg" class="RowenaRavenclaw" >
+    <img src="SalazarSlytherin.jpg" class="SalazarSlytherin" >
+  </div>
+
+  <script> 
+    document.querySelectorAll('.Fundadores img').forEach((box,
+    index,boxes) => {
+      box.addEventListener('mouseover', () => {
+        boxes.forEach((b, i) => {
+          let className = i < index ? 'prev' : i ===
+          index ? 'hovered' : 'next';
+          b.classList.remove('prev','next','hovered')
+          b.classList.add(className);
+        })
+      })
+    })
+  </script>
+
+  <div class="Texto2">
+    <p>Aqui, você será selecionado para uma das nossas quatro casas: Grifinória, Sonserina, Corvinal ou Lufa-Lufa. Cada casa valoriza diferentes virtudes, e seu tempo em Hogwarts será uma oportunidade para você desenvolver suas habilidades, tanto mágicas quanto pessoais. Nossos alunos aprendem matérias essenciais como Feitiços, Transfiguração, Poções e muito mais, sempre sob o olhar atento de nossos dedicados professores.</p><br>
+  </div>
+
+  <div class="Casas">
+    <img id="Grifinoria" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzk1cjU3cW1reWxvbmJqbGh5NGpucmgweWYxMmNkbzdveXVrdnRxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/j3J4UgFok1V2r2e22B/giphy.gif" class="Grifinoria">
+    <img id="LufaLufa" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHJlaDVtdTQxejNocWg3eHZlaWc2eWV2djF2czVteG5hZzlkY3BybCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eK6XtMKYJQfSEMBE18/giphy.gif" class="LufaLufa">
+    <img id="Corvinal" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjh5ZGk3bjRpd3F0bjhjenRjMTFiZTQzMTl4b2J6b3p2eXA3cDRzZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/fYZ5Ezw4UCqMabNFje/giphy.gif" class="Corvinal">
+    <img id="Sonserina" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2RnbDlhcXB0N2kwaGg5MjdoMGpjeHBqeDZoNDJoazlvOWhoeW81YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SqHKPaGKDRIvy01MV6/giphy.gif" class="Sonserina"> 
+  </div>
+
+  <div class="Texto3">
+    <p>Além das aulas, você terá a chance de participar de atividades emocionantes, como o famoso Quadribol, explorar os mistérios do nosso castelo encantado e descobrir passagens secretas. A cada ano, as casas competem pelo cobiçado Troféu das Casas, então esteja preparado para somar pontos através de suas conquistas.</p><br>
+  </div>
+  <div>
+
+  </div>
+  <div class="Texto4">
+    <h1>Prepare sua varinha e seu material escolar <br>a aventura está apenas começando!</h1>
+  </div>
+
+  <div class="gif">
+    <img id="carta" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGcyaDlsOW1pMDF1aWEweHJlY2lmYXBndDlhZDV6NzY2OWw4bDF1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/7FmBV4SNhEzIjro50C/giphy.gif" class="carta">
+  </div>
+
+  <footer class="rodape">
+    <p>© 2024 Hogwarts. Todos os direitos reservados.</p>
+    <br>
+    <p>Dúvidas? Entre em contato pelo Email: alvo.dumbledore@hogwarts.com | Telefone: (+44) 9340-0707</p>
+ <div class="termos">
+    <a>Política de Privacidade</a> |
+    <a>Termos de Uso</a> 
+  </div>
+    <div class="social">
+        <a href="https://facebook.com">Facebook</a> |
+        <a href="https://instagram.com">Instagram</a> |
+        <a href="https://linkedin.com">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="pginicialstyle.css" media="screen" />
+    <title>Página do Aluno</title>
+</head>
+<body>
+    <header>
+        <h2 class="hogwarts"> Hogwarts </h2>
+        <nav class="navigation">
+            <a href="Sobre Hogwarts">Sobre Hogwarts</a>
+            <a href="Casas">Casas</a>
+            <a href="Quadribol">Quadribol</a>
+        </nav>
+    </header>
+
+    <h1>Bem-Vindo à Página do Aluno!</h1>
+    <h2>O que você deseja acessar?</h2>
+
+    <div class="painel">
+        <a>Perfil do Aluno</a>
+        <b>Horários de Aula</b>
+        <c>Notas do Aluno</c>
+        <d>Financeiro</d>
+    </div>
+
+    <div>
+        <!-- Link de perfil dinâmico -->
+        <a id="perfilAluno" href="#"> 
+          <img src="perfildoaluno.jpg" alt="perfildoaluno" class="imagem1">
+        </a>
+
+        <img src="horariosdeaula.jpeg" alt="horariosdeaula" class="imagem2">
+        <img src="notasdoaluno.jpeg" alt="notasdoaluno" class="imagem3">
+        <img src="financeiro.jpeg" alt="financeiro" class="imagem4">
+    </div>
+
+    <div>
+        <img id="gif" src="https://i.gifer.com/6kX.gif" class="gif">
+    </div>
+
+    <footer>
+        <div class="rodape">
+            <p>Qualquer dúvida, envie uma carta para Dumbledore!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mapeamento de perfis com base no email
+        const profileLinks = {
+            'harryjamespotter@hogwarts.com': 'harrypotter.html',
+            'hermionejeangranger@hogwarts.com': 'hermionegranger.html',
+            'ronaldbiliusweasley@hogwarts.com': 'ronyweasley.html'
+        };
+
+        // Faz uma requisição para obter o email do usuário logado
+        async function getUserEmail() {
+            try {
+                const response = await fetch('/getUserEmail');
+                const data = await response.json();
+
+                if (response.ok) {
+                    const email = data.email;
+
+                    // Atualiza o link do perfil do aluno com base no email
+                    const perfilLink = profileLinks[email];
+                    const perfilAluno = document.getElementById('perfilAluno');
+                    perfilAluno.href = perfilLink;
+                } else {
+                    console.error(data.message);
+                }
+            } catch (error) {
+                console.error('Erro ao obter o email do usuário:', error);
+            }
+        }
+
+        // Chama a função assim que a página carrega
+        window.onload = getUserEmail;
+    </script>
+</body>
+</html>
